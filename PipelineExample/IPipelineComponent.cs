@@ -6,6 +6,9 @@
     /// Each pipeline component implements this, and they'll have the same TInput and TOutput types.  If we want to 
     /// super-simplify things, get rid of the generics all together and just hard-code the types in the interface
     /// </summary>
+    /// <remarks>
+    /// You could simplify this further and make it non generic, and just hard-code in the input and model types
+    /// </remarks>
     /// <typeparam name="TInput">Type of intput data (should not be modified)</typeparam>
     /// <typeparam name="TModel">Type of intermediate and output data (can be modified)</typeparam>
     internal interface IPipelineComponent<TInput, TModel>
