@@ -7,9 +7,11 @@
     internal class PipelineRunner : IPipelineRunner<InputModel,IndicativePrice>
     {
         private readonly IEnumerable<IPipelineComponent<InputModel, PricingModel>> _pipelineComponents;
-
+        
         public PipelineRunner(IEnumerable<IPipelineComponent<InputModel, PricingModel>> pipelineComponents)
         {
+            // All the IPipelineComponents<InputModel, PricingModel> that were configured in the Program.cs
+            // will be in this IEnumerable, IN THE ORDER THEY WERE CONFIGURED
             _pipelineComponents = pipelineComponents;
         }
 
