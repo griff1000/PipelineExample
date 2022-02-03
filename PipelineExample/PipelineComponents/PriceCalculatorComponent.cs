@@ -5,7 +5,7 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Last one in the chain to work on all the intermediate model data and calculate the price for output
+    /// Last one in the chain to work on all the input or intermediate model data and calculate the price for output
     /// </summary>
     internal class PriceCalculatorComponent : IPipelineComponent<InputModel, PricingModel>
     {
