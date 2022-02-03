@@ -17,6 +17,7 @@
         /// <inheritdoc/>
         public Task RunComponent(InputModel input, PricingModel model)
         {
+            // Random gibberish calculations - can be whatever is needed at this point
             model.PriceDetails.ConfidenceLevel = (model.NcbSegment + model.AgeSegment + model.MileageSegment) / 3;
             model.PriceDetails.MinimumPremium = 155 * model.VehicleValueSegment + model.PostcodeSegment * model.AgeSegment;
             model.PriceDetails.MaximumPremium = 2 * model.PriceDetails.MinimumPremium;
