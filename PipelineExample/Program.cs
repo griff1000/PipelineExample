@@ -14,7 +14,7 @@ serviceCollection.AddSingleton<IPipelineComponent<InputModel, PricingModel>, Pos
                 .AddSingleton<IPipelineComponent<InputModel, PricingModel>, VehicleLookupComponent>()
                 .AddSingleton<IPipelineComponent<InputModel, PricingModel>, PriceCalculatorComponent>();
 
-// Setup pipeline runner
+// Setup pipeline runner - this could be any class you want, doesn't need to be a dedicated pipeline runner
 serviceCollection.AddSingleton<IPipelineRunner<InputModel, IndicativePrice>, PipelineRunner>();
 
 // Get pipeline runner
