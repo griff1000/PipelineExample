@@ -7,7 +7,7 @@ using PipelineExample.PipelineComponents;
 
 var serviceCollection = new ServiceCollection();
 
-// Setup pipeline
+// Setup pipeline - these will be run in the order you add them here
 serviceCollection.AddSingleton<IPipelineComponent<InputModel, PricingModel>, PostcodeComponent>()
                 .AddSingleton<IPipelineComponent<InputModel, PricingModel>, AgeComponent>()
                 .AddSingleton<IPipelineComponent<InputModel, PricingModel>, NcbComponent>()
