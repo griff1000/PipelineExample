@@ -4,6 +4,9 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
+    /// Class to run the pipeline components.  You don't really need a dedicated runner, I just needed something
+    /// into which I could inject the IEnumberable of IPipelineComponents and then iterate through them.  Any 
+    /// class at an appropriate point in your processing would do.
     internal class PipelineRunner : IPipelineRunner<InputModel,IndicativePrice>
     {
         private readonly IEnumerable<IPipelineComponent<InputModel, PricingModel>> _pipelineComponents;
